@@ -21,13 +21,6 @@ pcts = list()
 def show_msgs(pack):
 	try:
 
-		# Just works if HTTPS is off:
-
-		#if 'POST /method/messages.send' in pack.load:
-		#	msg_sended = pack.load.split('&message=')[1].split('&peer_id=')[0]
-		#	friend_id = pack.load.split('&peer_id=')[1].split('&v=')[0]
-		#	print str(msg_sended)+' --> '+get_name_by_id(friend_id)
-
 		if '{"ts":' in pack.load:			
 			answ = json.loads(pack.load.split('\r\n\r\n')[1][:-2])
 			for i in answ['updates']:
