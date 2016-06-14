@@ -14,7 +14,7 @@ ts, num, friend_id, time, msg, msg_sended=0, 0, 0, 0, '', ''
 # This is just PoC :)
 
 # Special bytes, with them we can detect type of message
-msg_recive = [49, 17] # Add here smth by yourself, if you detect new varibles
+msg_recive = [49, 17, 33] # Add here smth by yourself, if you detect new varibles
 msg_send = [51, 3, 19] # Add here smth by yourself, if you detect new varibles
 
 ap = argparse.ArgumentParser(epilog="Example:  python "+sys.argv[0]+" -i wlan0", prog=sys.argv[0], formatter_class=lambda prog: argparse.HelpFormatter(prog,max_help_position=50))
